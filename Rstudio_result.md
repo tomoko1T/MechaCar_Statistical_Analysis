@@ -33,3 +33,58 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 8.774 on 44 degrees of freedom
 Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
 F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
+
+
+part 3
+> t.test(scoil$PSI, mu=1500)
+
+	One Sample t-test
+
+data:  scoil$PSI
+t = -1.8931, df = 149, p-value = 0.06028
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1497.507 1500.053
+sample estimates:
+mean of x 
+  1498.78 
+
+
+> t.test(subset(scoil$PSI,scoil$Manufacturing_Lot == "Lot1"), mu=1500)
+
+	One Sample t-test
+
+data:  subset(scoil$PSI, scoil$Manufacturing_Lot == "Lot1")
+t = 0, df = 49, p-value = 1
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1499.719 1500.281
+sample estimates:
+mean of x 
+     1500 
+
+> t.test(subset(scoil$PSI,scoil$Manufacturing_Lot == "Lot2"), mu=1500)
+
+	One Sample t-test
+
+data:  subset(scoil$PSI, scoil$Manufacturing_Lot == "Lot2")
+t = 0.51745, df = 49, p-value = 0.6072
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1499.423 1500.977
+sample estimates:
+mean of x 
+   1500.2 
+
+> t.test(subset(scoil$PSI,scoil$Manufacturing_Lot == "Lot3"), mu=1500)
+
+	One Sample t-test
+
+data:  subset(scoil$PSI, scoil$Manufacturing_Lot == "Lot3")
+t = -2.0916, df = 49, p-value = 0.04168
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1492.431 1499.849
+sample estimates:
+mean of x 
+  1496.14 
