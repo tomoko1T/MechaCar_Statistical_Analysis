@@ -3,6 +3,7 @@ Call:
 lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + 
     ground_clearance + AWD, data = mccar)
 
+# produces the coefficients for each variable in the linear equation.
 Coefficients:
      (Intercept)    vehicle_length    vehicle_weight     spoiler_angle  
       -1.040e+02         6.267e+00         1.245e-03         6.877e-02  
