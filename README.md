@@ -1,38 +1,36 @@
 # MechaCar Statistical Analysis
 
-- Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes.
-- Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots.
-- Run t-tests to determine if the manufacturing lots are statistically different from the mean population.
-- Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a summary interpretation of the findings.
+## Part 1: Linear Regression to Predict MPG
 
+Q1: Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 
-## Linear Regression to Predict MPG
-Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes.
+A. Vehicle length and ground clearance provided a no-random amount of variance to mpg because p-value is 2.60e-12 and 5.21e-08 respectively.  When p-value is less than the usual significant level of 0.05, the variable is considered to be no-random amount.
 
-Q
-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-= Ha, not error, slope not = 0
-A. Vehicle length and ground clearance because p-values are 2.60e-12 and 5.21e-08 respectively.  
+Q2: Is the slope of the linear model considered to be zero? Why or why not?
 
-Is the slope of the linear model considered to be zero? Why or why not?
+A. No, based on the the liner regression equation below the result is not zero.  
 
-A. No, because both p-values are less than usual significant level of 0.05.    
+mpg = 6.27(vehicle_length) + -0.001(vehicle_weight) + 0.069(spoiler angle) + 3.55(ground clearance) - -3.41(AWD)
 
-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+Additionally, p-value is 5.35e-11 which is less than the usual significant level of 0.05.  It indicates the slope is not zero (non-zero correlation).
 
-A: It does not predict mpg of MechaCar prototypes effectively because an intercept is 5.08e-08 which is statistically significant.  There are other variables and factors that impact on milage per gallon (mpg) that are not included in this model. 
+Q3: Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
 
-## Summary Statistics on Suspension Coils
-Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots.
+A: While R-squired shows 0.0.7149 which is close to 1, and p-value is 5.35e-11 which is less than the significant level of 0.05, this liner model does not predict mpg of MechaCar prototypes effectively.  There are other variables and factors that impact on milage per gallon (mpg).  Thus, the test should be conducted with the additional variables to reach to the better prediction.    
 
-Q
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+![This is an image]() 
+
+## Part 2: Summary Statistics on Suspension Coils
 
 The standard of variance of the suspension coils has been set at 100 poinds per square inch (PSI).  Based on the manufacturing data, the result of all manufacturing lots in total meets the standard because it is 62.29356.  However, by inspecting by each lot, lot # 3 fails to meet the standard.  The variance of lot # 3 is 170.2861224.    
 
+![This is an image](https://github.com/tomoko1T/MechaCar_Statistical_Analysis/blob/main/images/%232Total_summary.png)
+Summary Statistics across all manufacturing lots
 
-## T-Tests on Suspension Coils
-briefly summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
+![This is an image](https://github.com/tomoko1T/MechaCar_Statistical_Analysis/blob/main/images/%232Lot_summary.png) 
+Summary Statistics by lot number
+
+## Part 3: T-Tests on Suspension Coils
 
 Based on t-test, the results of p-value are as follows:  
 
@@ -43,21 +41,42 @@ Lot 3 : 0.04168
 
 The p-value of only lot 3 is less than the significant level of 0.05.  It is statistically significant.  Thus, we have sufficient evidence to reject the null hypothesis that there is no statistical difference between the ovserved sample mean, 1,496.14 PSI and its presumed population mean, 1,500 PSI. 
 
+![This is an image](https://github.com/tomoko1T/MechaCar_Statistical_Analysis/blob/main/images/part3all.png) 
+t-tests result of all manufacturing lots
 
-## Study Design: MechaCar vs Competition
-Design a Study Comparing the MechaCar to the Competition
+![This is an image](https://github.com/tomoko1T/MechaCar_Statistical_Analysis/blob/main/images/lot1.png) 
+t-tests result of lot 1
 
-- Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+![This is an image](https://github.com/tomoko1T/MechaCar_Statistical_Analysis/blob/main/images/lot2.png) 
+t-tests result of lot 2
 
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+![This is an image](https://github.com/tomoko1T/MechaCar_Statistical_Analysis/blob/main/images/lot3.png) 
+t-tests result of lot 3
 
-A metric to be tested is mentioned (5 pt)
-A null hypothesis or an alternative hypothesis is described (5 pt)
-A statistical test is described to test the hypothesis (5 pt)
-The data for the statistical test is described (5 pt)
+## Part 4: Study Design: MechaCar vs Competition
+
+MechaCar should test and present its result strategically dependnig on the target in the market they choose to compete with other competitor.  
+
+1. What metric or metrics are you going to test?
+
+vehicle length, AWD and price: 
+The vehicle length and AWD are crucial indicators for customers who prefer the cars with high performance.  They are usually willing to pay for the higher price as long as the car has the better performance.
+
+2. What is the null hypothesis or alternative hypothesis?
+
+H0: The lower price car has the high performance. 
+
+Ha: The lower price car does not have the high performance. 
+
+3. What statistical test would you use to test the hypothesis? And why?
+
+Multiple regression model would be used to show how the independent variable,vehicle length, AWD impact on the dependent variable, price. 
+
+4. What data is needed to run the statistical test?
+
+The data of price should be collected from both MechaCar and their competitors. 
+
+
 
 
 
