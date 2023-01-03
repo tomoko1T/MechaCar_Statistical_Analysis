@@ -2,7 +2,15 @@
 
 ## Overview 
 
-This analysis was conducted to review the production data of AutoRUs' newest prototype, the MechaCar.  It had been causing the delay in the manufacturing team's progress due to its production troubles.  The upper management requested to support the team providing with the data.       
+This project was conducted to review the production data of AutoRUs' newest prototype, the MechaCar.  It had been causing the delay in the manufacturing team's progress due to its production troubles.  The upper management requested to support the team providing with the results based on the following three technical analyses and a proposal for further statistical study.       
+
+Part 1: Linear Regression to Predict MPG
+
+Part 2: Summary Statistics on Suspension Coils
+
+Part 3: T-Test on Suspension Coils
+
+Part 4: A Study Comparing the MechaCar to the Competition
 
 ## Results
 
