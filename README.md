@@ -58,7 +58,7 @@ Lot 2 : 0.6072
 
 Lot 3 : 0.04168 
 
-The p-value of only lot 3 is less than the significant level of 0.05.  It is statistically significant.  Thus, we have sufficient evidence to reject the null hypothesis that there is no statistical difference between the ovserved sample mean, 1,496.14 PSI and its presumed population mean, 1,500 PSI. 
+The p-value of only lot 3 is less than the significant level of 0.05 which is statistically significant.  However, the p-value of all manufacturing lots in total is greater than 0.05.  Thus, we do not have the sufficient evidence to reject the null hypothesis.
 
 ![This is an image](https://github.com/tomoko1T/MechaCar_Statistical_Analysis/blob/main/images/part3all.png) 
 
